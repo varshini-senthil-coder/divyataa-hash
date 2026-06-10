@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-50: #f5eefb;
+  --color-purple-100: #ede0f7;
+  --color-purple-200: #d4b4ef;
+  --color-purple-300: #b47de3;
+  --color-purple-400: #9440d4;
+  --color-purple-500: #8a1fd0;
+  --color-purple-600: #7208b3;
+  --color-purple-700: #5c0691;
+  --color-purple-800: #470570;
+  --color-purple-900: #330350;
+}
+:root {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+  --brand-purple: var(--color-purple-600);
+  --primary: 277 92% 37%; /* #7208b3 in HSL */
+  --accent: 38 48% 60%;  /* #C5A46D in HSL */
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { filter: brightness(1) drop-shadow(0 0 2px rgba(197, 164, 109, 0.4)); }
+  50% { filter: brightness(1.2) drop-shadow(0 0 8px rgba(197, 164, 109, 0.8)); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+
