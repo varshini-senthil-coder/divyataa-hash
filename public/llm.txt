@@ -1,0 +1,31 @@
+# llm.txt – AI Accessibility Guidelines for Divyataa International School
+
+# Description
+Divyataa is a pure Montessori international school located in Tirupur, Tamil Nadu. 
+We offer educational programmes from KG through Grade 6, focusing on self-directed learning, 
+prepared environments, and trained Montessori guides.
+
+# Contact
+divyataa.info@gmail.com
++91 97511 12300
+
+# Pages to Index
+Allow: /
+Allow: /about-montessori
+Allow: /why-divyataa
+Allow: /montessori-in-tirupur
+Allow: /contact
+Allow: /gallery
+
+# Restrictions
+Disallow: /admin
+Disallow: /private
+
+# Metadata
+Attribution: required
+Usage: educational-use-allowed
+License: CC BY-NC 4.0
+School-Name: DIVYATAA INTERNATIONAL SCHOOL™
+Location: Tirupur, Tamil Nadu, India
+Grades: KG - Grade 6
+Philosophy: Pure Montessori
