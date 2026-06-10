@@ -1,0 +1,405 @@
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import studentImg from '../assets/trip.jpg';
+import studyImg from '../assets/study.JPG';
+import schoolLogo from '../assets/logo.webp';
+import mariaImg from '../assets/mariamontessori.jpg';
+import chairmanImg from '../assets/chairman.jpeg';
+import principalImg from '../assets/principal.jpeg';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0 },
+};
+
+const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="bg-white min-h-screen selection:bg-purple-100">
+      <Navbar />
+
+      {/* ─── Hero Section ─── */}
+     <section className="relative pt-50 pb-12 px-6 overflow-hidden border-b border-slate-100">
+      
+        {/* Background Image */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <img
+            src={studentImg}
+            alt="AboutUs Background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+      
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+  <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-100/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none z-10" />
+
+  <div className="max-w-7xl mx-auto text-center relative z-10">
+    <motion.span
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="inline-block px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-xs font-bold uppercase tracking-widest mb-8"
+    >
+      Our Story
+    </motion.span>
+
+    <motion.h1
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+      className="text-2xl md:text-4xl font-serif text-white mb-8 leading-tight font-bold"
+    >
+      About Us
+    </motion.h1>
+
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+      className="text-white md:text-lg text-slate-700 max-w-4xl mx-auto mb-12 leading-relaxed font-normal italic text-justify md:text-center"
+    >
+      Divyataa began with a question: what would education look like if it were truly designed for the child?
+    </motion.p>
+  </div>
+</section>
+
+      {/* ─── Our Story & Our Founders ─── */}
+      <section className="py-8 md:py-12 px-6 bg-white relative">
+        <div className="max-w-7xl mx-auto">
+          {/* Main Narrative Header */}
+          <motion.div
+            variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="max-w-full px-4 mx-auto text-center mb-8 md:mb-12"
+          >
+            <span className="text-purple-600 font-bold uppercase tracking-widest text-xs block mb-4">A Legacy of Purpose</span>
+          <h2
+  className="font-serif text-slate-900 font-bold text-center leading-tight whitespace-nowrap"
+  style={{ fontSize: "clamp(0.9rem, 1.8vw, 2rem)" }}
+>
+  Divyataa emerged from a deeper calling — a vision of what education could truly become.
+
+</h2>
+<br></br>
+            <div className="w-20 h-1.5 bg-purple-200 mx-auto rounded-full" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16">
+            
+            {/* ── Chairman's Legacy Card ── */}
+            <motion.div
+              variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+              className="group bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 hover:border-purple-200 transition-all duration-500 hover:shadow-xl hover:shadow-purple-900/5"
+            >
+              <div className="flex flex-col h-full">
+                <div className="flex flex-col md:flex-row gap-8 mb-8 items-center md:items-start">
+                  <div className="w-32 h-32 md:w-48 md:h-48 bg-slate-200 rounded-2xl shrink-0 overflow-hidden shadow-inner flex items-center justify-center text-slate-400">
+                    {/* Placeholder for Founder Photo */}
+                    <img src={chairmanImg} alt="Chairman" className="w-full h-full object-cover"/>
+                  </div>
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-gayathri font-bold text-slate-900 mb-2">Gi. Sudakar</h3>
+                    <p className="text-purple-600 font-bold text-sm uppercase tracking-widest">Chairman and Founder</p>
+                  </div>
+                </div>
+                
+                <div className="mb-8 pb-8 border-b border-slate-200">
+                  <p className="text-slate-800 font-medium italic leading-relaxed text-sm md:text-base">
+                    First-generation school founder carrying a century-long family legacy of educational philanthropy. Education as a gift to the community.
+                  </p>
+                </div>
+
+                <div className="space-y-6 text-slate-700 leading-relaxed font-gayathri text-base md:text-lg flex-grow text-justify">
+                  <p>
+                    Our chairman comes from a family for whom education has always been an act of giving. His grandfather, the late Shri S.M.Ramaswami Mudaliar, gave away his personal inheritance to establish a government school in Suriappam Palayam (S Murugappa Government Higher Secondary School), and spent his own money funding the higher education of students who had none.
+                  </p>
+                  <p>
+                    That spirit, of education as something you offer and not just sell, is written into Divyataa's foundation. As Chairman, Mr. Sudakar continues to invest in his grandfather's government school while building Divyataa as a new expression of that same commitment.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* ── Principal's Path Card ── */}
+            <motion.div
+              variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="group bg-purple-50/30 p-8 md:p-12 rounded-[2.5rem] border border-purple-100 hover:border-purple-200 transition-all duration-500 hover:shadow-xl hover:shadow-purple-900/5"
+            >
+              <div className="flex flex-col h-full">
+                <div className="flex flex-col md:flex-row gap-8 mb-8 items-center md:items-start">
+                  <div className="w-32 h-32 md:w-48 md:h-48 bg-slate-200 rounded-2xl shrink-0 overflow-hidden shadow-inner flex items-center justify-center text-slate-400">
+                    {/* Placeholder for Founder Photo */}
+                    <img src={principalImg} alt="Principal" className="w-full h-full object-cove"/>
+                  </div>
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-gayathri font-bold text-slate-900 mb-2">Kavitha Sudakar</h3>
+                    <p className="text-purple-600 font-bold text-sm uppercase tracking-widest">Principal and Co-Founder</p>
+                  </div>
+                </div>
+
+                <div className="mb-8 pb-8 border-b border-purple-100">
+                  <p className="text-xs md:text-sm text-slate-400 font-bold uppercase tracking-widest mb-4">Qualifications</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+  {short: 'M.Sc.'},
+  {short: 'M.Phil.'},
+  {short: 'NET'},
+  {short: 'SLET'},
+  {short: 'JRF'},
+  { short: 'DMTP', full: 'Diploma in Montessori Training and Practice' },
+  { short: 'DCPP', full: 'Diploma in Child Psychology and Parenting' },
+  { short: 'CEMP', full: 'Certificate in Elementary Montessori Practice(MTA Del, USA' }
+].map((q, i) => (
+  <span
+    key={i}
+    title={q.full}
+    className="px-2 py-1.5 bg-white rounded-xl text-[10px] md:text-xs text-slate-700 font-bold border border-purple-100 shadow-sm uppercase tracking-tighter cursor-help hover:bg-purple-50 transition-colors"
+  >
+    {q.short}
+  </span>
+))}
+                  </div>
+                </div>
+
+                <div className="space-y-6 text-slate-700 leading-relaxed font-gayathri text-base md:text-lg flex-grow text-justify">
+                  <p>
+                    Our principal arrived at early childhood education through a different path. Trained as a scientist and qualified at the highest academic levels, she built a distinguished career as a university lecturer.
+                  </p>
+                  <p>
+                    But she kept returning to the same question: what happens at the very beginning? Before university, before examinations, before the system gets involved, what does a child actually need? That question led her to Maria Montessori. And Montessori led on this journey.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Who We Are Today ─── */}
+      <section className="py-20 md:py-28 px-6 bg-slate-900 text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            {/* Left — Text */}
+            <motion.div
+              variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+            >
+              <span className="text-purple-400 font-bold uppercase tracking-widest text-gayathri block mb-6">Who We Are Today</span>
+              <h2 className="text-2xl md:text-4xl font-bold mb-8 leading-tight">
+                A pure Montessori school.
+              </h2>
+              <div className="space-y-5 text-slate-300 text-gayathri md:text-lg leading-relaxed font-light text-gayathri">
+                <p>
+                  Divyataa, Enriched Montessori Foundation, operates under the <span className="text-white font-medium">SMR Pavalammal Educational Trust</span>, carrying forward the legacy of a family that has believed in education for generations.
+                </p>
+                <p>
+                  We are a pure Montessori school. Not Montessori-inspired. Not Montessori-influenced. Pure Montessori, from our prepared environments and trained guides to our materials, our daily rhythms, and our relationship with every family who chooses us.
+                </p>
+                <p>
+                  We serve children from <span className="text-purple-400 font-bold">KG through Grade 6</span>, across three developmentally designed learning communities.
+                </p>
+              </div>
+
+            </motion.div>
+
+            {/* Right — Image + Badge */}
+            <motion.div
+              variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative"
+            >
+              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/5">
+                <img
+                  src={studyImg}
+                  alt="Children studying at Divyataa"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              {/* Floating Name Card */}
+              <div className="absolute -bottom-6 -left-4 md:-left-6 bg-purple-600 text-white p-5 md:p-6 rounded-2xl shadow-xl max-w-[260px]">
+                <h4 className="text-lg font-gayathri mb-1">Divyataa</h4>
+                <p className="text-gayathri md:text-sm opacity-90 leading-relaxed italic">
+                  "The name means divine radiance. It is the light we see in every child who walks through our doors."
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Centered Motto Section */}
+          <motion.div
+            variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="mt-20 md:mt-32 max-w-4xl mx-auto border-t border-white/10 pt-20"
+          >
+            <div className="flex justify-center gap-2 mb-16 px-2 whitespace-now">
+              {['Wisdom', 'Integrity', 'Compassion'].map((word) => (
+                <div key={word} className="text-center group">
+                  <p className="text-white font-gayathri text-2xl md:text-4xl mb-2 group-hover:text-purple-400 transition-colors">{word}</p>
+                  <div className="w-8 h-1 bg-purple-600 mx-auto rounded-full scale-0 group-hover:scale-100 transition-transform" />
+                </div>
+              ))}
+            </div>
+            <div className="space-y-8">
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed font-normal text-center italic">
+                Our motto, <span className="text-white font-medium">Wisdom, Integrity, Compassion</span>, reflects what we believe school should actually build in a child. Not just marks. Not just ranks. A whole human being.
+              </p>
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed font-gayathri text-center">
+                The name Divyataa means divine radiance. It is what we see in every child who walks through our doors, before the world has had a chance to convince them that learning is difficult, that failure is shameful, or that some things are simply not for them. Our work is to make sure that radiance is never dimmed.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── About Our Logo ─── */}
+      <section className="py-24 md:py-25 px-6 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <span className="text-purple-600 font-bold uppercase tracking-widest text-xs block mb-4">The Story Behind the Symbol</span>
+            <h2 className="text-2xl md:text-4xl font-gayathri text-slate-900 font-bold mb-8">About Our Logo</h2>
+            <p className="text-base md:text-lg text-slate-600 font-gayathri max-w-3xl mx-auto leading-relaxed">
+              Every element of our logo tells a story, it carries a specific meaning, rooted in our philosophy of what a child can become when education honours their full potential.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            {[
+  {
+    title: "The child in meditation",
+    desc: "At the centre of the logo sits a child in a posture of calm and inner stillness. Not performing. Not competing. Simply present. This is the child we aspire to nurture: one who has learned to be at peace with themselves, to concentrate deeply, and to direct their own mind."
+  },
+
+  {
+    logo: true
+  },
+
+  {
+    title: "The lotus petals",
+    desc: "The lotus rises from water and mud to bloom in full beauty, untouched by the conditions it grew in. It is one of the oldest symbols of learning, purity, and potential realised. The purple petals behind the child represent the school itself: a prepared environment from which every child can rise and flourish."
+  },
+
+  {
+    title: "The open book",
+    desc: "Beneath the child lies an open book, the universal symbol of knowledge and the love of learning. At Divyataa, the book is not a source of fear or examination. It is an invitation."
+  },
+
+  {
+    title: "The infinity symbol",
+    desc: "Woven through the centre of the logo is the infinity symbol, representing the boundless nature of a child's curiosity and the limitless possibilities that open up when that curiosity is respected rather than constrained. Learning at Divyataa has no ceiling."
+  },
+
+  {
+    title: "The colours",
+    desc: "Purple represents wisdom and dignity. Blue represents depth of knowledge and truth. Gold represents excellence and the light that every child carries within them. Green represents growth. Together they reflect our motto: Wisdom, Integrity, Compassion."
+  }
+].map((item, idx) => (
+              <motion.div
+                key={idx}
+                variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="bg-slate-50 p-8 md:p-10 rounded-[2rem] border border-slate-100 hover:shadow-xl hover:shadow-purple-900/5 transition-all duration-500"
+              >
+                {item.logo ? (
+  <div className="flex items-center justify-center h-70 min-h-[250px]">
+    <img
+      src={schoolLogo}
+      alt="Divyataa Logo"
+      className="max-h-250 object-contain"
+    />
+  </div>
+) : (
+  <>
+    <h3 className="text-xl font-gayathri font-bold text-slate-900 mb-4">
+      {item.title}
+    </h3>
+    <p className="text-slate-600 leading-relaxed font-gayathri">
+      {item.desc}
+    </p>
+  </>
+)}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+     {/* ─── Closing Quote ─── */}
+<section className="relative overflow-hidden">
+  <div className="max-w-6xl mx-auto relative z-10">
+
+    <div className="flex flex-col md:flex-row items-center gap-10">
+
+      {/* ✅ LEFT SIDE - CONTENT */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="flex-1 text-center md:text-left"
+      >
+        <span className="text-5xl md:text-8xl font-gayathri text-purple-200 block mb-3 leading-none">
+          "
+        </span>
+
+        <blockquote className="text-gayathri md:text-2xl font-gayathri text-slate-800 leading-snug ">
+          The greatest sign of success for a teacher is to be able to say:
+          the children are now working as if I did not exist.
+        </blockquote>
+
+        <cite className="text-slate-500 font-medium tracking-widest uppercase text-lxs gayathri"><br></br>
+          — Maria Montessori
+        </cite>
+      </motion.div>
+
+      {/* ✅ RIGHT SIDE - IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="flex-1 flex justify-center"
+      >
+        <img
+  src={mariaImg}
+  alt="Maria Montessori"
+  className="
+    w-60 h-60 md:w-70 md:h-70
+    object-cover
+    shadow-xl
+
+    border-4 border-purple-900
+
+    rounded-[10%_10%_10%_10%/10%_10%_10%_10%]
+  "
+/>
+      </motion.div>
+
+    </div>
+  </div>
+
+  {/* Background dots */}
+  <div
+    className="absolute inset-0 opacity-[0.03] pointer-events-none"
+    style={{
+      backgroundImage: 'radial-gradient(#7208b3 1px, transparent 1px)',
+      backgroundSize: '32px 32px'
+    }}
+  />
+</section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default AboutUs;
