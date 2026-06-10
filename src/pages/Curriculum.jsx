@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import silambam2Img from '../assets/silambam 2.webp';
+import silambam2Img from '../assets/silambam-2.jpg';
 import childrenLearningImg from '../assets/children-learning-C8YlCPHq.png';
 import whyMontessoriImg from '../assets/why-classroom.jpg';
 import materialsImg from '../assets/placeholder-materials-D6uKM2bM.webp';
