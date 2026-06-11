@@ -4,9 +4,9 @@ import Footer from '../components/Footer';
 import silambam2Img from '../assets/silambam-2.jpg';
 import childrenLearningImg from '../assets/children-learning-C8YlCPHq.png';
 import whyMontessoriImg from '../assets/why-classroom.jpg';
-import materialsImg from '../assets/placeholder-materials-D6uKM2bM.webp';
-import primaryCasaImg from '../assets/Primary Montessori Casa.JPG';
-import elementaryCuriosityImg from '../assets/018A8914.JPG';
+import materialsImg from '../assets/placeholder-materials-D6uKM2bM.jpg';
+import primaryCasaImg from '../assets/Primary-Mntessori-Casa.jpg';
+import elementaryCuriosityImg from '../assets/018A8914.jpg';
 import kgClassroomImg from '../assets/child.jpg';
 import { Link } from 'react-router-dom';
 

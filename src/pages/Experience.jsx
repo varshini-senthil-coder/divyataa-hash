@@ -7,11 +7,11 @@ import Footer from '../components/Footer';
 
 // Assets
 import campusImg from '../assets/school.webp';
-import classroomImg from '../assets/placeholder-classroom-Db3PxBcM.webp';
-import outdoorImg from '../assets/hero-children-B1qFxMJF.webp';
-import materialsImg from '../assets/placeholder-materials-D6uKM2bM.webp';
+import classroomImg from '../assets/placeholder-classroom-Db3PxBcM.jpg';
+import outdoorImg from '../assets/hero-children-B1qFxMJF.jpg';
+import materialsImg from '../assets/placeholder-materials-D6uKM2bM.jpg';
 
-import silambamImg from '../assets/silambam.webp';
+import silambamImg from '../assets/silambam.jpg';
 import whyMontessoriImg from '../assets/Why Montessori.jpg';
 import eventsImg from '../assets/events.png';
 import events2Img from '../assets/events 2.jpg';
